@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
+      <Navbar />
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center text-white">
         <Image
