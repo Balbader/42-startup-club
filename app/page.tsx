@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,20 +15,24 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/80 backdrop-blur-[2px]"></div>
         <div className="container mx-auto px-6 text-center z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in font-syne tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in font-syne tracking-tight" href="/">
             42 STARTUP CLUB
           </h1>
           <p className="text-xl md:text-1xl mb-8 text-gray-300 max-w-2xl mx-auto">
-            An exclusive community of 42 visionary entrepreneurs.<br />
+            42's exclusive community of visionary entrepreneurs.<br />
             Building the future together.
           </p>
           <div className="flex gap-4 justify-center">
-            <button className="text-white bg-[#1B3B5D] hover:bg-white hover:text-[#1B3B5D] text-sm font-medium py-2 px-6 border border-[#1B3B5D] hover:border-[#1B3B5D] transition-all duration-200 mr-4">
-              StartUp Portal
-            </button>
-            <button className="text-white bg-[#1B3B5D] hover:bg-white hover:text-[#1B3B5D] text-sm font-medium py-2 px-6 border border-[#1B3B5D] hover:border-[#1B3B5D] transition-all duration-200">
-              Investors Portal
-            </button>
+            <Link href="/startup-dashboard">
+              <button className="text-white bg-[#1B3B5D] hover:bg-white hover:text-[#1B3B5D] text-sm font-medium py-2 px-6 border border-[#1B3B5D] hover:border-[#1B3B5D] transition-all duration-200 mr-4">
+                StartUp Portal
+              </button>
+            </Link>
+            <Link href="/investor-dashboard">
+              <button className="text-white bg-[#1B3B5D] hover:bg-white hover:text-[#1B3B5D] text-sm font-medium py-2 px-6 border border-[#1B3B5D] hover:border-[#1B3B5D] transition-all duration-200">
+                Investors Portal
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -78,12 +83,16 @@ export default function Home() {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <div className="flex gap-4 justify-center">
-              <button className="text-white bg-[#1B3B5D] hover:bg-white hover:text-[#1B3B5D] text-sm font-medium py-2 px-6 border border-[#1B3B5D] hover:border-[#1B3B5D] transition-all duration-200 mr-4">
-                StartUp Portal
-              </button>
-              <button className="text-white bg-[#1B3B5D] hover:bg-white hover:text-[#1B3B5D] text-sm font-medium py-2 px-6 border border-[#1B3B5D] hover:border-[#1B3B5D] transition-all duration-200">
-                Investors Portal
-              </button>
+              <Link href="/startup-dashboard">
+                <button className="text-white bg-[#1B3B5D] hover:bg-white hover:text-[#1B3B5D] text-sm font-medium py-2 px-6 border border-[#1B3B5D] hover:border-[#1B3B5D] transition-all duration-200 mr-4">
+                  StartUp Portal
+                </button>
+              </Link>
+              <Link href="/investor-dashboard">
+                <button className="text-white bg-[#1B3B5D] hover:bg-white hover:text-[#1B3B5D] text-sm font-medium py-2 px-6 border border-[#1B3B5D] hover:border-[#1B3B5D] transition-all duration-200">
+                  Investors Portal
+                </button>
+              </Link>
             </div>
           </div>
         </div>

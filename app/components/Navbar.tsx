@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(false);
@@ -39,17 +40,19 @@ export default function Navbar() {
         <div className="container mx-auto px-2 py-0">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <Image
-                src="/42_Logo.jpg"
-                alt="42 Logo"
-                width={80}
-                height={80}
-                className="object-contain"
-                priority
-              />
-              <a href="#" className="text-xl font-bold text-gray-900 hover:text-gray-600 transition-colors">
+              <Link href="/">
+                <Image
+                  src="/42_Logo.jpg"
+                  alt="42 Logo"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                  priority
+                />
+              </Link>
+              <Link href="/" className="text-xl font-bold text-gray-900 hover:text-gray-600 transition-colors">
                 STARTUP CLUB
-              </a>
+              </Link>
             </div>
             <div className="flex items-center">
               <button className="text-white bg-[#1B3B5D] hover:bg-white hover:text-[#1B3B5D] text-sm font-medium py-2 px-6 border border-[#1B3B5D] hover:border-[#1B3B5D] transition-all duration-200 mr-4">
