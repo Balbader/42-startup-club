@@ -1,8 +1,7 @@
 'use client';
 
-import { FaUsers, FaChartLine, FaMoneyBillWave, FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
+import { FaUsers, FaMoneyBillWave, FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { HiOutlineLightBulb } from 'react-icons/hi';
 import Image from 'next/image';
 import InvestorNavbar from '../investor-navbar';
 
