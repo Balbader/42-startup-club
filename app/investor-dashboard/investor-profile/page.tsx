@@ -5,7 +5,17 @@ import { FaXTwitter } from 'react-icons/fa6';
 import Image from 'next/image';
 import InvestorNavbar from '../investor-navbar';
 
-function StartupProfile({ startupInfo }) {
+interface StartupInfo {
+	name: string;
+	tagline: string;
+	stage: string;
+	foundingDate: string;
+	industry: string;
+	location: string;
+	teamSize: number;
+}
+
+function StartupProfile({ startupInfo }: { startupInfo: StartupInfo }) {
 	return (
 		<div className="bg-white rounded-lg shadow-lg p-6 mb-8">
 			<div className="grid grid-cols-2 md:grid-cols-4 gap-8">

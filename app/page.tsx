@@ -11,11 +11,9 @@ export default function Home() {
 				<Image src="https://cdn.pixabay.com/photo/2015/01/09/11/11/seminar-594125_1280.jpg" alt="Hero Background" fill className="object-cover" priority />
 				<div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/80 backdrop-blur-[2px]"></div>
 				<div className="container mx-auto px-6 text-center z-10">
-					<h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in font-syne tracking-tight" href="/">
-						42 STARTUP CLUB
-					</h1>
+					<h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in font-syne tracking-tight">42 STARTUP CLUB</h1>
 					<p className="text-xl md:text-1xl mb-8 text-gray-300 max-w-2xl mx-auto">
-						42's exclusive community of visionary entrepreneurs.
+						42 StartUp Club is a community of visionary entrepreneurs.
 						<br />
 						Building the future together.
 					</p>
