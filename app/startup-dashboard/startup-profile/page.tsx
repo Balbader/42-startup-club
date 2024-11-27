@@ -6,7 +6,7 @@ import { HiOutlineLightBulb } from 'react-icons/hi';
 import Image from 'next/image';
 import StartupNavbar from '../startup-navbar';
 
-export default function StartupDashboard() {
+export default function StartupProfile() {
 	const startupInfo = {
 		name: 'CodeMentor',
 		tagline: 'Peer-to-peer programming education platform',
@@ -32,6 +32,23 @@ export default function StartupDashboard() {
 			phase: 'Long-term Goals (2024-2025)',
 			goals: ['Expand to international markets', 'Achieve €10M ARR', 'Launch enterprise solution', 'Series B funding round'],
 		},
+	];
+
+	const team = [
+		{
+			name: 'John Doe',
+			role: 'CEO & Co-founder',
+			image: '/man-1.jpg',
+			links: {
+				linkedin: 'https://linkedin.com/in/johndoe',
+				twitter: 'https://twitter.com/johndoe',
+				github: 'https://github.com/johndoe'
+			}
+		},
+		{ name: 'Jane Smith', role: 'CTO & Co-founder', image: '/woman-1.jpg', links: { linkedin: 'https://linkedin.com/in/janesmith', twitter: 'https://twitter.com/janesmith', github: 'https://github.com/janesmith' } },
+		{ name: 'Alice Johnson', role: 'CMO', image: '/woman-2.jpg', links: { linkedin: 'https://linkedin.com/in/alicejohnson', twitter: 'https://twitter.com/alicejohnson', github: 'https://github.com/alicejohnson' } },
+		{ name: 'Bob Brown', role: 'Software Engineer', image: '/man-2.jpg', links: { linkedin: 'https://linkedin.com/in/bobbrown', twitter: 'https://twitter.com/bobbrown', github: 'https://github.com/bobbrown' } },
+		{ name: 'Charlie Davis', role: 'Product Manager', image: '/man-3.jpg', links: { linkedin: 'https://linkedin.com/in/charliedavis', twitter: 'https://twitter.com/charliedavis', github: 'https://github.com/charliedavis' } },
 	];
 
 	return (
@@ -173,6 +190,39 @@ export default function StartupDashboard() {
 												</li>
 											))}
 										</ul>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+
+					{/* Team Section */}
+					<div className="bg-white rounded-lg shadow-lg p-6 mt-8">
+						<h2 className="text-2xl font-bold mb-6">Our Team</h2>
+						<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+							{team.map((member, index) => (
+								<div className="bg-white shadow-md rounded-lg overflow-hidden" key={index}>
+									<Image src={member.image} alt="Team Member" width={150} height={150} className="w-full h-48 object-cover" />
+									<div className="p-4">
+										<h3 className="text-lg font-semibold">{member.name}</h3>
+										<p className="text-gray-500">{member.role}</p>
+										<div className="flex gap-2 mt-2">
+											{member.links.linkedin && (
+												<a href={member.links.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+													<FaLinkedin className="w-5 h-5" />
+												</a>
+											)}
+											{member.links.twitter && (
+												<a href={member.links.twitter} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
+													<FaXTwitter className="w-5 h-5" />
+												</a>
+											)}
+											{member.links.github && (
+												<a href={member.links.github} target="_blank" rel="noopener noreferrer" className="text-gray-900 hover:text-black">
+													<FaGithub className="w-5 h-5" />
+												</a>
+											)}
+										</div>
 									</div>
 								</div>
 							))}
