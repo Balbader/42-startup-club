@@ -24,6 +24,9 @@ export default function InvestorNavbar() {
 							<Link href="/investor-dashboard" className="text-gray-900 hover:text-blue-600 text-base font-medium transition-colors mr-4">
 								Investors Dashboard
 							</Link>
+							<Link href="/startup-dashboard" className="text-gray-900 hover:text-blue-600 text-base font-medium transition-colors mr-4">
+								Startups Dashboard
+							</Link>
 						</div>
 					</div>
 				</div>
